@@ -25,7 +25,7 @@ Example of four different read-through regions found by Dogcatcher
         
         How the algorithm works...
 		The algorithm finds read-through sections using a sliding window with a percent coverage threshold.
-		The size of the window and percent coverage is input by the user. (default is 100bp window and 90% coverage i.e. if 95bp of your 100bp window is covered)
+		The size of the window and percent coverage is input by the user. (default is 100bp window and 90% coverage i.e. if 90bp of your 100bp window is covered)
 		The window stops if coverage of reads drop below the threshold or at the start of the next gene on the same strand (for local read-through)
 		It will then find any genes on the same and opposite strand that overlap with read-through and seperate them by biotypes.
 
