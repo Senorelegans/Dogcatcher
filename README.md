@@ -242,12 +242,12 @@ Differential Expression
     --annotation_file_with_path ${GTF} \
     --input_prefix ${COMPARISON_PATH} \
     --output_prefix ${COMPARISON_PATH}/FINAL_OUT \
-    --input_runon_DESeq2_plu_sense_file ${COMPARISON_PATH}/Dogcatcher_with_non-significant_genes/plu_sense_ALL_SAMPLES_LONGEST_RUN_ON_with_nonsig_Dogcatcher_DESeq2_senseunique.csv \
-    --input_runon_DESeq2_min_sense_file ${COMPARISON_PATH}/Dogcatcher_with_non-significant_genes/min_sense_ALL_SAMPLES_LONGEST_RUN_ON_with_nonsig_Dogcatcher_DESeq2_senseunique.csv \
-    --input_runin_DESeq2_plu_antisense_file ${COMPARISON_PATH}/Dogcatcher_with_non-significant_genes/plu_antisense_ALL_SAMPLES_LONGEST_RUN_IN_with_nonsig_Dogcatcher_DESeq2_antisenseunique.csv \
-    --input_runin_DESeq2_min_antisense_file ${COMPARISON_PATH}/Dogcatcher_with_non-significant_genes/min_antisense_ALL_SAMPLES_LONGEST_RUN_IN_with_nonsig_Dogcatcher_DESeq2_antisenseunique.csv \
-    --padj ${PADJ}
-    wait
+    --input_DOG_DESeq2_plu_sense_file ${COMPARISON_PATH}/Dogcatcher_with_non-significant_genes/plu_ALL_SAMPLES_DOG_with_nonsig_Dogcatcher_DESeq2_sense.csv \
+    --input_DOG_DESeq2_min_sense_file ${COMPARISON_PATH}/Dogcatcher_with_non-significant_genes/min_ALL_SAMPLES_DOG_with_nonsig_Dogcatcher_DESeq2_sense.csv \
+    --input_ADOG_DESeq2_plu_antisense_file ${COMPARISON_PATH}/Dogcatcher_with_non-significant_genes/plu_ALL_SAMPLES_ADOG_with_nonsig_Dogcatcher_DESeq2_antisense.csv \
+    --input_ADOG_DESeq2_min_antisense_file ${COMPARISON_PATH}/Dogcatcher_with_non-significant_genes/min_ALL_SAMPLES_ADOG_with_nonsig_Dogcatcher_DESeq2_antisense.csv \
+    --padj 0.05
+    #wait
 
 Output files
 
