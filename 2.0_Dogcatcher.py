@@ -211,6 +211,7 @@ def get_bg_df(fin):
     my_col = ["chr", "start", "end","count"]
     df_bed = pd.read_csv(fin, sep="\t", header=None, names=my_col, comment="#", dtype={"chr": str, "start": int, "end": int, "count": int}, low_memory=False)
     df_bed["length"] = df_bed["end"] - df_bed["start"]
+    df_bed["count"] = df_bed["count"].abs()
     df_bed = df_bed[ df_bed["count"] > 1 ]
     return df_bed
 
