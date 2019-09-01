@@ -85,7 +85,7 @@ if __name__ == '__main__':
     def get_gene_id_name_column(df_gtf):
         """This function will take a gtf and unpack the gene id and biotypes column"""
         #Expand the gene id column, then merge back to get gene_id name in new column
-        df_gtf["type"] = "exon"
+        df_gtf["type"] = "gene"
         df_gene_id = df_gtf["gene_id"].str.split(';',expand=True)
         header_int_to_char(df_gene_id)
         for column_name in list(df_gene_id): #Find column that has gene_biotype in it

@@ -1,6 +1,12 @@
 #########################################################################################
 #####Run Rsubread for counts
+#install.packages("BiocManager")
+#BiocManager::install("Rsubread")
+#BiocManager::install("DESeq2")
+
+
 library(Rsubread);
+
 
 files=c(bamlist)
 
@@ -11,7 +17,9 @@ senseunique=featureCounts(files,
 isGTFAnnotationFile = TRUE,
 annot.ext = gtf,
 GTF.attrType = "gene_id",
+GTF.featureType = "gene",
 allowMultiOverlap = TRUE,
+isPairedEnd=TRUE,
 nthreads = cpus,
 strandSpecific = 1)
 
@@ -26,8 +34,10 @@ antisenseunique=featureCounts(files,
 isGTFAnnotationFile = TRUE,
 annot.ext = gtf,
 GTF.attrType = "gene_id",
+GTF.featureType = "gene",
 allowMultiOverlap = TRUE,
 nthreads = cpus,
+isPairedEnd=TRUE,
 strandSpecific = 2)
 
 write.table(x=data.frame(
